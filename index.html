@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .app {
+      background: rgba(0,0,0,0.3);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      width: 300px;
+    }
+    button {
+      margin: 8px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      min-height: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="app">
+  <h2>How are you feeling?</h2>
+  <button onclick="showMood('happy')">😊 Happy</button>
+  <button onclick="showMood('neutral')">😐 Neutral</button>
+  <button onclick="showMood('sad')">😔 Sad</button>
+   <button onclick="showMood('angry')">😡 Angry</button>
+
+  <div id="message"></div>
+</div>
+
+<script>
+  function showMood(mood) {
+    let message = "";
+
+    if (mood === "happy") {
+      message = "That's awesome! Keep smiling 🌟";
+    } else if (mood === "neutral") {
+      message = "Some days are calm. That's okay 🌿";
+    } else if (mood === "sad") {
+      message = "Hey, tough days pass. You're not alone ❤️";
+    }else if (mood === "angry") {
+  message = "Pause. Breathe. This moment will pass 🔥🧘";
+}
+
+
+    document.getElementById("message").innerText = message;
+  }
+</script>
+
+</body>
+</html>
